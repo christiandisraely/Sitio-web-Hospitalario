@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+.wave{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.img, .contenido_login{
+    flex: 3;
+    padding: 50px;
+}
+.img img, .contenido_login img{
+    width: 200px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contenido_login h2{
+    margin: 18px 0;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 2.9rem;
+}
+.center-text {
+    text-align: center;
+}
+
+.input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d4bebe;
+}
+.i{
+    color: #d4bebe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.i i{
+    transition: .3s;
+}
+.input-div > div{
+    display: flex;
+    align-items: center;
+}
+.input-div > div > label > h5{
+    margin-left: 10px;
+}
+.input-div > div > input{
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+.btn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #680197, #00ffbf,#c046f8);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn:hover{
+    background-position: right;
+}
+/*responsive para tablets y celulares*/
+/*tablets*/
+@media screen and (max-width: 1050px){
+    .contenedor{
+        grid-gap: 5rem;
+    }
+}
+/*tablet mas pequena*/
+@media screen and (max-width: 1000px){
+    form{
+        width: 290px;
+    }
+    .contenido_login h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+    .img img{
+        width: 400px;
+    }
+
+}
+/*celulares*/
+@media screen and (max-width: 900px){
+    .contenedor{
+        grid-template-columns: 1fr;
+    }
+    .img{
+        display: none;
+    }
+    .wave{
+        display: none;
+    }
+    .contenido_login{
+        justify-content: center;
+    }
+
+}
